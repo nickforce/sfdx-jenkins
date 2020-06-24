@@ -7,7 +7,7 @@ node {
 	def DEPLOYDIR='/force-app/main/default'
 	echo DEPLOYDIR
 	echo pwd
-	sh 'ls -ll /var/lib/jenkins'
+	sh 'ls -ll /var/lib/jenkins/workspace'
 	def TEST_LEVEL='RunLocalTests'
 	def SF_INSTANCE_URL=env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 	echo SF_INSTANCE_URL
