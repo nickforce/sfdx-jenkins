@@ -4,7 +4,7 @@ node {
 
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
-	def DEPLOYDIR='/force-app/main/default'
+	def DEPLOYDIR='/var/lib/jenkins/workspace/new_pipeline_master/force-app/main/default'
 	echo DEPLOYDIR
 	echo pwd
 	sh 'ls -ll /var/lib/jenkins/workspace/new_pipeline_master'
