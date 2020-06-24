@@ -4,7 +4,7 @@ node {
 
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
-	def DEPLOYDIR='/'
+	def DEPLOYDIR='force-app'
 	echo DEPLOYDIR
 	echo pwd
 	def TEST_LEVEL='RunLocalTests'
