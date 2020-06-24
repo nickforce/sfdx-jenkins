@@ -6,6 +6,7 @@ node {
 	echo SF_AUTH_URL
 	def DEPLOYDIR='/'
 	echo DEPLOYDIR
+	echo pwd
 	def TEST_LEVEL='RunLocalTests'
 	def SF_INSTANCE_URL=env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 	echo SF_INSTANCE_URL
