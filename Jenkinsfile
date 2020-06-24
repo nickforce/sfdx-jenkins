@@ -9,7 +9,7 @@ node {
 	echo pwd
 	sh 'ls -ll /var/lib/jenkins/workspace/new_pipeline_master'
 	
-	sh 'echo ${env.WORKSPACE}'
+	sh 'echo env.WORKSPACE'
 
 	def TEST_LEVEL='RunLocalTests'
 	def SF_INSTANCE_URL=env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
