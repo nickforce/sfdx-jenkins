@@ -4,9 +4,10 @@ node {
 
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
-	def DEPLOYDIR='./force-app/main/default'
+	def DEPLOYDIR='/force-app/main/default'
 	echo DEPLOYDIR
 	echo pwd
+	echo ls -ll '/var/lib/jenkins'
 	def TEST_LEVEL='RunLocalTests'
 	def SF_INSTANCE_URL=env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 	echo SF_INSTANCE_URL
