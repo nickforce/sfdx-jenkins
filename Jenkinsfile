@@ -17,7 +17,15 @@ node {
 
 	def toolbelt = tool 'toolbelt'
 	echo toolbelt
+	// -------------------------------------------------------------------------
+    	// Check out code from source control.
+    	// -------------------------------------------------------------------------
 
+   	stage('checkout source') {
+        	checkout scm
+    	}
+	
+	
 	rc = command "${toolbelt}/sfdx --help"
 	if (rc != 0) {
 		error 'SFDX CLI Jenkins tool initalize failed.'
