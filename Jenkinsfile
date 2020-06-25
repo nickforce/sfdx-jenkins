@@ -18,12 +18,12 @@ node {
 	def toolbelt = tool 'toolbelt'
 	echo toolbelt
 	// -------------------------------------------------------------------------
-    	// Check out code from source control.
-    	// -------------------------------------------------------------------------
+	// Check out code from source control.
+	// -------------------------------------------------------------------------
 
    	stage('checkout source') {
-        	checkout scm
-    	}
+		checkout scm
+	}
 	
 	
 	rc = command "${toolbelt}/sfdx --help"
