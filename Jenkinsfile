@@ -4,8 +4,23 @@ node {
 
 	// echo 'test print env variables'
 	// echo sh(returnStdout: true, script: 'env')
+	
+	def current_build_branch = env.BRANCH_NAME
+	echo 'CURRENT BUILD BRANCH NAME'
+	echo current_build_branch
+	
+	if(current_build_branch == 'master') {
+		echo 'if statement master'
+	}
+	else if(current_build_branch == 'dev') {
+		echo 'if statement dev'
+	}
 
-	echo env.BRANCH_NAME
+	if (isUnix()) {
+        return sh(returnStatus: true, script: script);
+    } else {
+		return bat(returnStatus: true, script: script);
+    }
 
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
