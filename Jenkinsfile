@@ -3,7 +3,7 @@
 node {
 
 	echo 'test print env variables'
-	echo env
+	echo sh(returnStdout: true, script: 'env')
 
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
