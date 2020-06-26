@@ -57,15 +57,18 @@ node {
 	if (rc2 != 0) {
 		error 'SFDX CLI Authorization to target env has failed.'
 	}
-	// run tests
-	rc3 = command "${toolbelt}/sfdx force:apex:test:run -u targetEnvironment --wait 10"
-	if (rc3 != 0) {
-		error 'There was an issue running apex tests. Check ORG for details'
-	}
+	
 	// deploy full build  --dev-debug
 	rc4 = command "${toolbelt}/sfdx force:source:deploy --wait 10 --sourcepath ${DEPLOYDIR} --testlevel ${TEST_LEVEL} -u targetEnvironment"
 	if (rc4 != 0) {
 		error 'There was an issue deploying. Check ORG deployment status page for details'
+	}
+
+
+	// run tests
+	rc3 = command "${toolbelt}/sfdx force:apex:test:run -u targetEnvironment --wait 10"
+	if (rc3 != 0) {
+		error 'There was an issue running apex tests. Check ORG for details'
 	}
 }
 
