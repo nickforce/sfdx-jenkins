@@ -2,7 +2,7 @@
 
 node {
 
-	// echo 'test print env variables'
+	// echo 'test print env variables'-----
 	// echo sh(returnStdout: true, script: 'env')
 	
 	def current_build_branch = env.BRANCH_NAME
