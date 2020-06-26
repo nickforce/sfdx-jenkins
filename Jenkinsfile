@@ -16,12 +16,6 @@ node {
 		echo 'if statement dev'
 	}
 
-	if (isUnix()) {
-        return sh(returnStatus: true, script: script);
-    } else {
-		return bat(returnStatus: true, script: script);
-    }
-
 	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
 	def DEPLOYDIR='/var/lib/jenkins/workspace/new_pipeline_master/force-app/main/default'
