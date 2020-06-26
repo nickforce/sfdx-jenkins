@@ -9,15 +9,18 @@ node {
 	echo 'CURRENT BUILD BRANCH NAME'
 	echo current_build_branch
 	
+
+	def SF_AUTH_URL
 	if(current_build_branch == 'master') {
-		echo 'if statement master'
+		SF_AUTH_URL = env.SFDX_AUTH_URL
 	}
 	else if(current_build_branch == 'dev') {
-		echo 'if statement dev'
+		SF_AUTH_URL = env.SFDX_AUTH_URL_dev
 	}
-
-	def SF_AUTH_URL=env.SFDX_AUTH_URL
 	echo SF_AUTH_URL
+
+
+
 	def DEPLOYDIR='/var/lib/jenkins/workspace/new_pipeline_master/force-app/main/default'
 	echo DEPLOYDIR
 	echo pwd
