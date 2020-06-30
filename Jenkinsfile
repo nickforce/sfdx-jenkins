@@ -4,7 +4,7 @@ node {
 
 	// echo 'test print env variables'
 	// echo sh(returnStdout: true, script: 'env')
-
+	//
 	echo "${BUILD_URL}/consoleText"
 	//
 	// def current_build_branch = env.BRANCH_NAME
