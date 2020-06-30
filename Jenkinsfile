@@ -6,7 +6,7 @@ node {
 	// echo sh(returnStdout: true, script: 'env')
 
 	echo "${BUILD_URL}/consoleText"
-	
+	//
 	def current_build_branch = env.BRANCH_NAME
 	echo 'CURRENT BUILD BRANCH NAME'
 	echo current_build_branch
