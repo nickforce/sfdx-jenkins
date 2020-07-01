@@ -19,6 +19,9 @@ node {
 	else if(current_build_branch == 'dev') {
 		SF_AUTH_URL = env.SFDX_AUTH_URL_dev
 	}
+	else { // PR the current branch will be teh name of the PR
+
+	}
 	echo SF_AUTH_URL
 
 
@@ -37,7 +40,7 @@ node {
 	def toolbelt = tool 'toolbelt'
 	echo toolbelt
 	// -------------------------------------------------------------------------
-	// Check out code from source control --
+	// Check out code from source control 
 	// -------------------------------------------------------------------------
 
    	stage('checkout source') {
