@@ -44,6 +44,7 @@ node {
 	// -------------------------------------------------------------------------
 
    	stage('checkout source') {
+		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
 
