@@ -44,7 +44,7 @@ node {
 		checkout scm
 	}
 	
-	
+	/*
 	rc = command "${toolbelt}/sfdx --help"
 	if (rc != 0) {
 		error 'SFDX CLI Jenkins tool initalize failed.'
@@ -72,6 +72,7 @@ node {
 	if (rc3 != 0) {
 		error 'There was an issue running apex tests. Check ORG for details'
 	}
+	*/
 }
 
 def command(script) {
