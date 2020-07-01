@@ -40,10 +40,11 @@ node {
 	def toolbelt = tool 'toolbelt'
 	echo toolbelt
 	// -------------------------------------------------------------------------
-	// Check out code from source control 
+	// Check out code from source control git --
 	// -------------------------------------------------------------------------
 
    	stage('checkout source') {
+		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
 
