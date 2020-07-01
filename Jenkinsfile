@@ -44,6 +44,12 @@ node {
 		checkout scm
 	}
 
+	echo "auth URL below ##############################"
+	echo SF_AUTH_URL
+
+	echo "env.BRANCH_NAME below ##############################"
+	echo env.BRANCH_NAME
+
 	writeFile file: 'authjenkinsci.txt', text: SF_AUTH_URL
 	sh 'ls -l authjenkinsci.txt'
 	sh 'cat authjenkinsci.txt'
