@@ -19,6 +19,12 @@ node {
 	else if(current_build_branch == 'dev') {
 		SF_AUTH_URL = env.SFDX_AUTH_URL_dev
 	}
+	else if(current_build_branch == 'qa') {
+		SF_AUTH_URL = env.SFDX_AUTH_URL_qa
+	}
+	else if(current_build_branch == 'uat') {
+		SF_AUTH_URL = env.SFDX_AUTH_URL_uat
+	}
 	else { // PR the current branch will be teh name of the PR
 
 	}
