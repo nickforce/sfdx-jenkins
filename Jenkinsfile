@@ -91,6 +91,8 @@ node {
 		error 'There was an issue running apex tests. Check ORG for details'
 	}
 	
+	// check for success deploy/build to this point - 
+	// launch Selenium scripts. >
 }
 
 def command(script) {
