@@ -30,7 +30,7 @@ public class Reusable_Methods_With_Loggers {
     public static WebDriver setDriver() throws InterruptedException, IOException {
         //kill all chrome driver instance
         Thread.sleep(1800);
-        Runtime.getRuntime().exec("taskkill /F /IM src//main//resources//chromedriver.exe /T");
+        // Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         Thread.sleep(1800);
         //set the chrome path
         System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver.exe");
