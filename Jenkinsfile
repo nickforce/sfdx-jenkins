@@ -60,13 +60,14 @@ node {
 		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
-
+withMaven(
 	dir("selenium/Maven_Automation_Project") {
 		echo 'selenium dir'
 		sh 'pwd'
 		sh 'ls -ll'
 		sh 'mvn clean install'
 	}
+)
 
 	dir("selenium/Maven_Automation_Project/target") {
 		echo 'selenium target dir'
