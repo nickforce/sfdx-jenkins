@@ -2,6 +2,11 @@
 
 node {
 
+	echo 'print java version'
+	echo java -version
+
+
+
 	echo 'test print env variables'
 	echo sh(returnStdout: true, script: 'env')
 	//
