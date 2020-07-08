@@ -3,7 +3,7 @@
 node {
 
 	echo 'print java version'
-	echo java -version
+	echo command java -version
 
 
 
