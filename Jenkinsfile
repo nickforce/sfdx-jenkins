@@ -60,6 +60,7 @@ node {
 		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
+	// this variable must match name of Maven Global Tool Plugin in Jenkins
 	def mvn_version = 'MAVEN_HOME'
 	withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {   
 		dir("selenium/Maven_Automation_Project") {
