@@ -60,7 +60,7 @@ node {
 		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
-
+	def mvn_version = 'MAVEN_HOME'
 	withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {   
 		dir("selenium/Maven_Automation_Project") {
 			echo 'selenium dir'
