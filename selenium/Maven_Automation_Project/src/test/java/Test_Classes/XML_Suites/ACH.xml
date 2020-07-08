@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite: ACH Batch Test">
+    <!-- All Equipment -->
+    <test name="SmokeTest-ACH Transactions" >
+        <classes>
+            <class
+                    name="Test_Classes.Cucumber_Files.StepDefinitions.TC01_Create_Origination_File_For_ACH_Debit_Transactions" />
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->

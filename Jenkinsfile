@@ -61,7 +61,7 @@ node {
 		checkout scm
 	}
 
-	dir("selenium") {
+	dir("selenium/Maven_Automation_Project") {
 		echo 'selenium dir'
 		sh 'pwd'
 		sh 'ls -ll'

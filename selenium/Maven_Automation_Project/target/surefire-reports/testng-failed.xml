@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite: ACH Batch Test]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="SmokeTest-ACH Transactions(failed)" verbose="0">
+    <classes>
+      <class name="Test_Classes.Payments_ACH_Debit_Credit_Origination">
+        <methods>
+          <include name="defineDriver"/>
+          <include name="verifyACHOutData"/>
+          <include name="endTest"/>
+          <include name="closeInfo"/>
+          <include name="deleteAllData"/>
+          <include name="CreateDebitAndCreditTransactions"/>
+          <include name="callACHOutBatch"/>
+          <include name="getMethodName"/>
+          <include name="CreateBetrClient"/>
+        </methods>
+      </class> <!-- Test_Classes.Payments_ACH_Debit_Credit_Origination -->
+    </classes>
+  </test> <!-- SmokeTest-ACH Transactions(failed) -->
+</suite> <!-- Failed suite [Suite: ACH Batch Test] -->
