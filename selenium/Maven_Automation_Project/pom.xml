@@ -92,7 +92,7 @@
                     <version>2.19.1</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>testng.xml</suiteXmlFile>
+                            <suiteXmlFile>Simple_Test.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
