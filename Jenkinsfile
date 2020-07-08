@@ -65,6 +65,13 @@ node {
 		echo 'selenium dir'
 		sh 'pwd'
 		sh 'ls -ll'
+		sh 'mvn clean install'
+	}
+
+	dir("selenium/Maven_Automation_Project/target") {
+		echo 'selenium target dir'
+		sh 'pwd'
+		sh 'ls -ll'
 	}
 
 	echo "auth URL below ##############################"
