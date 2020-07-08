@@ -2,6 +2,11 @@
 
 node {
 
+	tools { 
+        maven 'Maven 3.3.9' 
+        jdk 'jdk8' 
+    }
+
 	echo 'print java version'
 	testRun = command "java -version"
 	testRun2 = command "mvn --version"
