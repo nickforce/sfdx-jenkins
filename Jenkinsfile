@@ -70,11 +70,11 @@ node {
 		}
   	}
 
-
 	dir("selenium/Maven_Automation_Project/target") {
 		echo 'selenium target dir'
 		sh 'pwd'
 		sh 'ls -ll'
+		sh 'java -jar com.test-1.0-SNAPSHOT.jar'
 	}
 
 	echo "auth URL below ##############################"
