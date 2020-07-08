@@ -68,6 +68,7 @@ node {
 			sh 'pwd'
 			sh 'ls -ll'
 			sh 'mvn clean install -e'
+			// -e above gives a more verbose log output
 		}
   	}
 
