@@ -4,7 +4,7 @@ node {
 
 	echo 'print java version'
 	testRun = command "java -version"
-
+	testRun2 = command "mvn --version"
 
 
 	echo 'test print env variables'
