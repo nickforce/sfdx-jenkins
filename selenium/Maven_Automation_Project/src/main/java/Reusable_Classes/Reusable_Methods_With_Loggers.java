@@ -33,7 +33,7 @@ public class Reusable_Methods_With_Loggers {
         // Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         Thread.sleep(1800);
         //set the chrome path
-        System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src//main//resources//chromedriver");
         //set some pre conditions using ChromeOptions
         ChromeOptions options = new ChromeOptions();
         //set the arguments you want for the driver
