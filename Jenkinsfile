@@ -62,6 +62,8 @@ node {
 	}
 
 	dir("selenium") {
+		echo 'selenium dir'
+		sh 'pwd'
 		sh 'ls -ll'
 	}
 
