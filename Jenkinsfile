@@ -2,6 +2,7 @@
 
 node {
 
+
 	
 	echo 'print java version'
 	testRun = command "java -version"
@@ -58,6 +59,10 @@ node {
    	stage('checkout source') {
 		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
+	}
+
+	dir("selenium") {
+		sh 'ls -ll'
 	}
 
 	echo "auth URL below ##############################"
