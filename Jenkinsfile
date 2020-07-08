@@ -53,7 +53,7 @@ node {
 	def toolbelt = tool 'toolbelt'
 	echo toolbelt
 	// -------------------------------------------------------------------------
-	// Check out code from source control git-
+	// Check out code from source control git
 	// -------------------------------------------------------------------------
 
    	stage('checkout source') {
