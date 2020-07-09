@@ -37,8 +37,8 @@ public class Reusable_Methods_With_Loggers {
         System.setProperty("webdriver.chrome.driver",file.getAbsolutePath());
         //set some pre conditions using ChromeOptions
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
-        //options.addArguments("headless");
+        //options.setBinary("/usr/bin/google-chrome");
+        options.addArguments("headless");
         //set the arguments you want for the driver
         options.addArguments("start-maximized","incognito");
         //now simply define your chrome driver
