@@ -67,7 +67,7 @@ node {
 			echo 'selenium dir'
 			sh 'pwd'
 			sh 'ls -ll'
-			sh 'mvn clean install -e -X'
+			sh 'mvn clean install'
 			// -e, -X above gives a more verbose log output, put log into separate file ' > log-file.log'
 		}
   	}
