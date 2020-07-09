@@ -76,7 +76,7 @@ node {
 		echo 'selenium target dir'
 		sh 'pwd'
 		sh 'ls -ll'
-		sh 'java -jar com.test-1.0-SNAPSHOT.jar'
+		// sh 'java -jar com.test-1.0-SNAPSHOT.jar'
 		// Liberty_Lending_Automation 1.0-SNAPSHOT
 	}
 
