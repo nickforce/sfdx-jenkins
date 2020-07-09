@@ -33,11 +33,11 @@ public class Reusable_Methods_With_Loggers {
         // Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");
         Thread.sleep(1800);
         //set the chrome path
-        File file = new File("src//main//resources//chromedriver");
+        File file = new File("src/main/resources/chromedriver");
         System.setProperty("webdriver.chrome.driver",file.getAbsolutePath());
         //set some pre conditions using ChromeOptions
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+        //options.setBinary("/usr/bin/google-chrome");
         //options.addArguments("headless");
         //set the arguments you want for the driver
         options.addArguments("start-maximized","incognito");
