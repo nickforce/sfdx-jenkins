@@ -11,7 +11,7 @@ node {
               <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
             recipientProviders: [[$class: 'DevelopersRecipientProvider']]
           )
-
+	/*
 	echo 'print java version'
 	testRun = command "java -version"
 	testRun2 = command "mvn --version"
@@ -133,6 +133,7 @@ node {
 	
 
 	//slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+	*/
 }
 
 def command(script) {
