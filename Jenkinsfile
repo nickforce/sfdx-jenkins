@@ -69,6 +69,7 @@ node {
 			sh 'ls -ll'
 			sh 'mvn clean install'
 			// -e, -X above gives a more verbose log output, put log into separate file ' > log-file.log'
+			sh 'mvn test -Dsurefire.suiteXmlFiles=Simple_Test.xml'
 		}
   	}
 
@@ -77,7 +78,7 @@ node {
 		sh 'pwd'
 		sh 'ls -ll'
 		// sh 'java -jar com.test-1.0-SNAPSHOT.jar'
-		sh 'java -jar Liberty_Lending_Automation-1.0-SNAPSHOT.jar'
+		// sh 'java -jar Liberty_Lending_Automation-1.0-SNAPSHOT.jar'
 	}
 
 	echo "auth URL below ##############################"
