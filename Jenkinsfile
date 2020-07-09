@@ -1,9 +1,11 @@
 #!groovy
 
 node {
+	// send build started notifications
+        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 
+	/*
 
-	
 	echo 'print java version'
 	testRun = command "java -version"
 	testRun2 = command "mvn --version"
@@ -122,6 +124,7 @@ node {
 			// sh 'java -jar Liberty_Lending_Automation-1.0-SNAPSHOT.jar'
 		}
   	}
+	*/
 
 	
 }
