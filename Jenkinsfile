@@ -60,26 +60,7 @@ node {
 		echo 'Pulling...' + env.BRANCH_NAME
 		checkout scm
 	}
-	// this variable must match name of Maven Global Tool Plugin in Jenkins
-	def mvn_version = 'MAVEN_HOME'
-	withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {   
-		dir("selenium/Maven_Automation_Project") {
-			echo 'selenium dir'
-			sh 'pwd'
-			sh 'ls -ll'
-			sh 'mvn clean install'
-			// -e, -X above gives a more verbose log output, put log into separate file ' > log-file.log'
-			sh 'mvn test -Dsurefire.suiteXmlFiles=Simple_Test.xml'
-		}
-  	}
-
-	dir("selenium/Maven_Automation_Project/target") {
-		echo 'selenium target dir'
-		sh 'pwd'
-		sh 'ls -ll'
-		// sh 'java -jar com.test-1.0-SNAPSHOT.jar'
-		// sh 'java -jar Liberty_Lending_Automation-1.0-SNAPSHOT.jar'
-	}
+	
 
 	echo "auth URL below ##############################"
 	echo SF_AUTH_URL
@@ -118,8 +99,31 @@ node {
 		error 'There was an issue running apex tests. Check ORG for details'
 	}
 	
-	// check for success deploy/build to this point - 
+	// TODO - check for success deploy/build to this point - 
 	// launch Selenium scripts. >
+
+
+	// this variable must match name of Maven Global Tool Plugin in Jenkins
+	def mvn_version = 'MAVEN_HOME'
+	withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {   
+		dir("selenium/Maven_Automation_Project") {
+			echo 'selenium dir'
+			sh 'pwd'
+			sh 'ls -ll'
+			sh 'mvn clean install'
+			// -e, -X above gives a more verbose log output, put log into separate file ' > log-file.log'
+			sh 'mvn test -Dsurefire.suiteXmlFiles=Simple_Test.xml'
+		}
+
+		dir("selenium/Maven_Automation_Project/target") {
+			echo 'selenium target dir'
+			sh 'pwd'
+			sh 'ls -ll'
+			// sh 'java -jar Liberty_Lending_Automation-1.0-SNAPSHOT.jar'
+		}
+  	}
+
+	
 }
 
 def command(script) {
