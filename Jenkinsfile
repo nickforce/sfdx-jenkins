@@ -4,7 +4,7 @@ node {
 	// send build started notifications
 	//slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 
-	// send to email
+	// send to email -
         emailext (
             subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
             body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
